@@ -1,5 +1,7 @@
 # Tiny_CD
 
+This fork is modified to run on [lightning.ai](https://lightning.ai/) - to setup the env `pip install -r requirements-lightningai.txt` and download the preformatted datasets to a new `data` folder
+
 This is the implementation of: TinyCD: A (Not So) Deep Learning Model For Change Detection
 
 :fire: :fire: :fire: TinyCD has been accepted for publication in [Neural Computing and Applications](https://link.springer.com/article/10.1007/s00521-022-08122-3) :fire: :fire: :fire:
@@ -82,7 +84,7 @@ If you want to evaluate your trained model, or if you want to reproduce the pape
 you can find in the "pretrained_models" folder, you can run:
 
 ```cmd
-python test_ondata.py --datapath "Your_data_path" --modelpath "Your_path_to_pretrained_model"
+python test_ondata.py --datapath "/teamspace/studios/this_studio/data/LEVIR-CD-256" --modelpath "/teamspace/studios/this_studio/Tiny_model_4_CD/pretrained_models/levir_best.pth"
 ```
 
 ## Train your model
@@ -90,7 +92,7 @@ python test_ondata.py --datapath "Your_data_path" --modelpath "Your_path_to_pret
 You can re-train our model, or if you prefer you can play with the parameters of our model and then train it using 
 
 ```cmd
-python training.py --datapath "Your_data_path" --log-path "Path_to_save_logs_and_models_checkpoints"
+python training.py --datapath "/teamspace/studios/this_studio/data/LEVIR-CD-256" --log-path "/teamspace/studios/this_studio/logs"
 ```
 
 ## External repositories using TinyCD
